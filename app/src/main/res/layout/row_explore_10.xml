@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="explore10RowModel" type="com.application.app.modules.explore8.data.model.Explore10RowModel"/>
+    </data>
+    <FrameLayout android:id="@+id/frame"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" style="@style/groupStyle">
+        <LinearLayout android:id="@+id/linear"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStyle">
+            <FrameLayout android:id="@+id/frame1"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" style="@style/groupStyle">
+                <ImageView android:id="@+id/image"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_120px"
+                    android:layout_width="@dimen/_120px"
+                    android:scaleType="centerCrop"
+                    cornerRadius="@{@dimen/_2px}" imageRes="@{@drawable/img_cardbox_33}"/>
+            </FrameLayout>
+            <TextView android:gravity="top|start"
+                android:id="@+id/txtTurnerHoock"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2px"
+                android:layout_width="match_parent"
+                android:text="@{explore10RowModel.txtTurnerHoock}" style="@style/textStyleRobotoregular12"/>
+            <TextView android:gravity="top|start"
+                android:id="@+id/txtAsLongWeFigh"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2px"
+                android:layout_width="match_parent"
+                android:text="@{explore10RowModel.txtAsLongWeFigh}" style="@style/textStyleRobotoregular12"/>
+        </LinearLayout>
+    </FrameLayout>
+</layout>

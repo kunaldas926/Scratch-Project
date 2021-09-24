@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="seeMore3VM" type="com.application.app.modules.seemore3.data.viewmodel.SeeMore3VM"/>
+    </data>
+    <LinearLayout android:id="@+id/linear"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylegray_900">
+        <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:id="@+id/linear1"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/image"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_24px"
+                    android:layout_width="@dimen/_24px" android:src="@drawable/img_icon___arrowleft"/>
+                <TextView android:gravity="top|start"
+                    android:id="@+id/txtAction"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8px"
+                    android:layout_weight="0.18"
+                    android:layout_width="0dp"
+                    android:text="@{seeMore3VM.seeMore3Model.txtAction}" style="@style/textStyleRobotoregular20"/>
+                <ImageView android:id="@+id/image1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_18px"
+                    android:layout_marginStart="@dimen/_50px"
+                    android:layout_width="@dimen/_18px" android:src="@drawable/img_icon___airplay"/>
+                <ImageView android:id="@+id/image2"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_18px"
+                    android:layout_marginStart="@dimen/_24px"
+                    android:layout_width="@dimen/_18px" android:src="@drawable/img_icon___bell"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <androidx.core.widget.NestedScrollView
+            android:clipToPadding="false" android:fillViewport="true"
+            android:id="@+id/scrollView"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_width="match_parent" android:paddingBottom="@dimen/_10px">
+            <LinearLayout android:id="@+id/linear2"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical" style="@style/groupStylegray_900">
+                <TextView android:gravity="top|start"
+                    android:id="@+id/txtActionMovies"
+                    android:layout_gravity="start"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16px"
+                    android:layout_marginTop="@dimen/_14px"
+                    android:layout_width="match_parent"
+                    android:text="@{seeMore3VM.seeMore3Model.txtActionMovies}" style="@style/textStyleRobotoregular24"/>
+                <LinearLayout android:id="@+id/linear3"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_15px"
+                    android:layout_marginStart="@dimen/_15px"
+                    android:layout_marginTop="@dimen/_14px"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical" style="@style/groupStyle">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:nestedScrollingEnabled="false"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:spanCount="3" itemSpace="@{@dimen/_16px}"
+                        tools:itemCount="12" tools:listitem="@layout/row_see_more_4"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <FrameLayout android:id="@+id/frame"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" style="@style/groupStyle">
+            <LinearLayout android:id="@+id/linear4"
+                android:layout_gravity="center"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="vertical" style="@style/groupStylegray_900">
+                <LinearLayout android:id="@+id/linear5"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <LinearLayout android:id="@+id/linear6"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:layout_width="0dp"
+                        android:orientation="vertical" style="@style/groupStyle">
+                        <ImageView android:id="@+id/image3"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="@dimen/_22px"
+                            android:layout_marginEnd="@dimen/_34px"
+                            android:layout_marginStart="@dimen/_34px"
+                            android:layout_marginTop="@dimen/_8px"
+                            android:layout_width="@dimen/_22px" android:src="@drawable/img_left_icon"/>
+                        <TextView android:gravity="top|center"
+                            android:id="@+id/txtHome"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2px"
+                            android:layout_width="match_parent"
+                            android:text="@{seeMore3VM.seeMore3Model.txtHome}" style="@style/textStyleRobotoregular12_1"/>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/linear7"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:layout_width="0dp"
+                        android:orientation="vertical" style="@style/groupStyle">
+                        <ImageView android:id="@+id/image4"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="@dimen/_22px"
+                            android:layout_marginEnd="@dimen/_34px"
+                            android:layout_marginStart="@dimen/_34px"
+                            android:layout_marginTop="@dimen/_8px"
+                            android:layout_width="@dimen/_22px" android:src="@drawable/img_icon___globe"/>
+                        <TextView android:gravity="top|center"
+                            android:id="@+id/txtExplore"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2px"
+                            android:layout_width="match_parent"
+                            android:text="@{seeMore3VM.seeMore3Model.txtExplore}" style="@style/textStyleRobotoregular12"/>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/linear8"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:layout_width="0dp"
+                        android:orientation="vertical" style="@style/groupStyle">
+                        <ImageView android:id="@+id/image5"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="@dimen/_22px"
+                            android:layout_marginEnd="@dimen/_34px"
+                            android:layout_marginStart="@dimen/_34px"
+                            android:layout_marginTop="@dimen/_8px"
+                            android:layout_width="@dimen/_22px" android:src="@drawable/img_icon___airplay_1"/>
+                        <TextView android:gravity="top|center"
+                            android:id="@+id/txtChannels"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2px"
+                            android:layout_width="match_parent"
+                            android:text="@{seeMore3VM.seeMore3Model.txtChannels}" style="@style/textStyleRobotoregular12"/>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/linear9"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:layout_width="0dp"
+                        android:orientation="vertical" style="@style/groupStyle">
+                        <ImageView android:id="@+id/image6"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="@dimen/_22px"
+                            android:layout_marginEnd="@dimen/_34px"
+                            android:layout_marginStart="@dimen/_34px"
+                            android:layout_marginTop="@dimen/_8px"
+                            android:layout_width="@dimen/_22px" android:src="@drawable/img_icon___user"/>
+                        <TextView android:gravity="top|center"
+                            android:id="@+id/txtUser"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2px"
+                            android:layout_width="match_parent"
+                            android:text="@{seeMore3VM.seeMore3Model.txtUser}" style="@style/textStyleRobotoregular12"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

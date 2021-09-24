@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="explore13RowModel" type="com.application.app.modules.explore11.data.model.Explore13RowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linear2"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="vertical" style="@style/groupStyle">
+        <FrameLayout android:id="@+id/frame1"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" style="@style/groupStyle">
+            <ImageView android:id="@+id/image1"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_160px"
+                android:layout_width="@dimen/_312px"
+                android:scaleType="centerCrop"
+                cornerRadius="@{@dimen/_2px}" imageRes="@{@drawable/img_cardbox_15}"/>
+        </FrameLayout>
+        <TextView android:gravity="top|start"
+            android:id="@+id/txtRadioflash"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8px"
+            android:layout_width="wrap_content"
+            android:text="@{explore13RowModel.txtRadioflash}" style="@style/textStyleRobotoregular16"/>
+        <LinearLayout android:id="@+id/linear4"
+            android:layout_gravity="start"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2px"
+            android:layout_width="wrap_content" android:orientation="horizontal">
+            <TextView android:gravity="top|start"
+                android:id="@+id/txtSubLabel"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@{explore13RowModel.txtSubLabel}" style="@style/textStyleRobotoregular12"/>
+            <FrameLayout android:background="@color/white_A700"
+                android:id="@+id/frame3"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_3px"
+                android:layout_marginStart="@dimen/_8px" android:layout_width="@dimen/_3px"/>
+            <LinearLayout android:id="@+id/linear5"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4px"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal" style="@style/groupStyle">
+                <TextView android:gravity="top|start"
+                    android:id="@+id/txt45"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="@{explore13RowModel.txt45}" style="@style/textStyleRobotoregular10"/>
+                <ImageView android:id="@+id/image3"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_6px"
+                    android:layout_marginStart="@dimen/_2px"
+                    android:layout_width="@dimen/_6px" android:src="@drawable/img_icon___star"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

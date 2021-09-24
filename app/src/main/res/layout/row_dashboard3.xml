@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="dashboard3RowModel" type="com.application.app.modules.dashboard.data.model.Dashboard3RowModel"/>
+    </data>
+    <FrameLayout android:id="@+id/frame1"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" style="@style/groupStyle">
+        <LinearLayout android:id="@+id/linear1"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStyle">
+            <FrameLayout android:id="@+id/frame3"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_2px"
+                android:layout_width="match_parent" style="@style/groupStyle">
+                <ImageView android:id="@+id/image"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_143px"
+                    android:layout_width="@dimen/_90px"
+                    android:scaleType="centerCrop"
+                    cornerRadius="@{@dimen/_2px}" imageRes="@{@drawable/img_cardbox_17}"/>
+            </FrameLayout>
+            <LinearLayout android:id="@+id/linear3"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2px"
+                android:layout_marginTop="@dimen/_2px"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal" style="@style/groupStyle">
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    android:id="@+id/ratingBar"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:numStars="5"
+                    android:progressBackgroundTint="@color/blue_50"
+                    android:progressTint="@color/yellow_700"
+                    android:rating="4" style="@style/Widget.AppCompat.RatingBar.Small"/>
+            </LinearLayout>
+            <TextView android:gravity="top|start"
+                android:id="@+id/txtIKillGiants"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2px"
+                android:layout_width="match_parent"
+                android:text="@{dashboard3RowModel.txtIKillGiants}" style="@style/textStyleRobotoregular12"/>
+        </LinearLayout>
+    </FrameLayout>
+</layout>

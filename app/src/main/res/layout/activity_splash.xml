@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="splashVM" type="com.application.app.modules.splash.data.viewmodel.SplashVM"/>
+    </data>
+    <FrameLayout android:id="@+id/frame"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStylegray_900">
+        <FrameLayout android:id="@+id/frame1"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent" style="@style/groupStyle_2">
+            <ImageView android:clickable="true" android:id="@+id/image"
+                android:layout_gravity="center"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:scaleType="centerCrop" imageRes="@{@drawable/img_background_2}"/>
+            <FrameLayout android:id="@+id/frame2"
+                android:layout_gravity="center"
+                android:layout_height="match_parent" android:layout_width="match_parent">
+                <FrameLayout android:id="@+id/frame3"
+                    android:layout_gravity="center"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent" style="@style/groupStyle">
+                    <FrameLayout android:id="@+id/frame4"
+                        android:layout_gravity="center"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent" style="@style/groupStylecornerRadius_1">
+                        <LinearLayout android:id="@+id/linear"
+                            android:layout_gravity="center"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="@dimen/_100px"
+                            android:layout_marginEnd="@dimen/_16px"
+                            android:layout_marginStart="@dimen/_16px"
+                            android:layout_marginTop="@dimen/_100px"
+                            android:layout_width="match_parent"
+                            android:orientation="vertical" style="@style/groupStyle">
+                            <TextView android:gravity="top|start"
+                                android:id="@+id/txtGetStarted"
+                                android:layout_gravity="start"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_50px"
+                                android:layout_width="match_parent"
+                                android:text="@{splashVM.splashModel.txtGetStarted}" style="@style/textStyleRobotobold34"/>
+                            <TextView android:gravity="top|center"
+                                android:id="@+id/txtWatchYourFavo"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_16px"
+                                android:layout_width="match_parent"
+                                android:text="@{splashVM.splashModel.txtWatchYourFavo}" style="@style/textStyleRobotoregular20"/>
+                        </LinearLayout>
+                    </FrameLayout>
+                </FrameLayout>
+            </FrameLayout>
+        </FrameLayout>
+    </FrameLayout>
+</layout>

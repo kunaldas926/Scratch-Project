@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="seeMore4RowModel" type="com.application.app.modules.seemore3.data.model.SeeMore4RowModel"/>
+    </data>
+    <FrameLayout android:id="@+id/frame"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" style="@style/groupStyle">
+        <LinearLayout android:id="@+id/linear"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStyle">
+            <LinearLayout android:id="@+id/linear1"
+                android:layout_gravity="start"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/_15px"
+                android:layout_marginTop="@dimen/_100px"
+                android:layout_width="match_parent"
+                android:orientation="vertical" style="@style/groupStyle">
+                <FrameLayout android:id="@+id/frame1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent" style="@style/groupStylecornerRadius">
+                    <TextView android:gravity="top|start"
+                        android:id="@+id/txtRadioflash"
+                        android:layout_gravity="center"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:text="@{seeMore4RowModel.txtRadioflash}" style="@style/textStyleRobotoregular12"/>
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</layout>
